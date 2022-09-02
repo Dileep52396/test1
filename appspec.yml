@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/app/
+hooks:
+  ApplicationStop:
+    - location: Scripts/stop_server.sh
+      timeout: 3600
+      runas: root
+  ApplicationStart:
+    - location: Scripts/start_server.sh
+      timeout: 3600
+      runas: root
