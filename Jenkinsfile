@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Git clone') {
             steps {
-            git 'https://github.com/abjal1/codedeploy.git'
+            git 'https://github.com/Dileep52396/test1.git'
             }
         }
         stage('Build') {
@@ -18,17 +18,17 @@ pipeline {
         }
         stage('Push to s3') {
             steps {
-                sh 'aws s3 cp test.zip s3://abjals3/test.zip'
+                sh 'aws s3 cp test.zip s3://dileepks09990/test.zip'
             }
         }
         stage('deploy app') {
             steps {
                 createDeployment(
-                  s3Bucket: 'abjals3',
+                  s3Bucket: 'dileepks09990',
                   s3Key: 'test.zip',
                   s3BundleType: 'zip', // [Valid values: tar | tgz | zip | YAML | JSON]
                   applicationName: 'test',
-                  deploymentGroupName: 'test-deploygroup',
+                  deploymentGroupName: 'test-dg',
                   deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
                   description: 'Test deploy',
                   waitForCompletion: 'true',
