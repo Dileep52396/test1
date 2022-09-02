@@ -13,12 +13,12 @@ pipeline {
         }
         stage('zip') {
             steps {
-                sh 'zip test.zip index.html appspec.yml ./Scripts/start_server.sh ./Scripts/stop_server.sh'
+                sh 'zip test-${BUILD_NUMBER}.zip index.html appspec.yml ./Scripts/start_server.sh ./Scripts/stop_server.sh'
             }
         }
         stage('Push to s3') {
             steps {
-                sh 'aws s3 cp test.zip s3://dileepks09990/test.zip'
+                sh 'aws s3 cp test-${BUILD_NUMBER}.zip s3://dileepks09990/test-${env.BUILD_NUMBER}.zip'
             }
         }
         stage('deploy app') {
