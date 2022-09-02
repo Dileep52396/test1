@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Push to s3') {
             steps {
-                sh 'aws s3 cp test-${BUILD_NUMBER}.zip s3://dileepks09990/test-${env.BUILD_NUMBER}.zip'
+                sh 'aws s3 cp test-${BUILD_NUMBER}.zip s3://dileepks09990/test-${BUILD_NUMBER}.zip'
             }
         }
         stage('deploy app') {
