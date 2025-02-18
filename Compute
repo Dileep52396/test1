@@ -1,0 +1,22 @@
+Azure offers several core Compute services that provide different ways to run applications and workloads. Here are the main ones:
+
+1. Virtual Machines (VMs)
+Azure Virtual Machines (VMs) – On-demand scalable cloud-based virtual servers.
+Azure Virtual Machine Scale Sets (VMSS) – Automatically scales multiple VMs based on demand.
+Azure Spot VMs – Cost-effective VMs for workloads that can tolerate interruptions.
+2. Containers & Kubernetes
+Azure Kubernetes Service (AKS) – Managed Kubernetes for running containerized applications.
+Azure Container Instances (ACI) – Serverless container execution without managing VMs.
+Azure Container Apps – Fully managed container service for microservices and event-driven apps.
+3. Serverless Compute
+Azure Functions – Event-driven, serverless compute platform for executing code on demand.
+Azure Logic Apps – Workflow automation and orchestration without coding.
+4. App Services
+Azure App Service – PaaS offering for web apps, mobile backends, and APIs.
+Azure Spring Apps – Managed Spring Boot apps for Java developers.
+5. Hybrid & Edge Compute
+Azure Stack – Extends Azure services to on-premises and edge locations.
+Azure Arc – Hybrid and multi-cloud management for servers, Kubernetes, and data services.
+6. High-Performance Computing (HPC)
+Azure Batch – Large-scale parallel and batch computing.
+Azure CycleCloud – Automates and manages HPC clusters.
